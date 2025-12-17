@@ -1,14 +1,14 @@
 import { Badge } from "@/components/ui/badge";
 import { TabsList, TabsTrigger } from "@/components/ui/tab";
-import { CrawlEntity } from "@/lib/types/business/website-crawl";
+import { Category, CrawlEntity, RedFlag, RegistrationField, Schedule, Waiver } from "@/lib/types/business/website-crawl";
 
 type TabButtonsProps = {
   data: {
-    categories: CrawlEntity[],
-    waivers: CrawlEntity[],
-    schedules: CrawlEntity[],
-    fields: CrawlEntity[],
-    flags: CrawlEntity[]
+    categories: CrawlEntity<Category>[],
+    waivers: CrawlEntity<Waiver>[],
+    schedules: CrawlEntity<Schedule>[],
+    fields: CrawlEntity<RegistrationField>[],
+    flags: CrawlEntity<RedFlag>[]
   }
 }
 

@@ -1,15 +1,15 @@
 import { Tabs } from "@/components/ui/tab";
 import TabButtons from "./tab-buttons";
 import { ReactNode } from "react";
-import { CrawlEntity } from "@/lib/types/business/website-crawl";
+import { Category, CrawlEntity, RedFlag, RegistrationField, Schedule, Waiver } from "@/lib/types/business/website-crawl";
 
 type TabContainerProps = {
   data: {
-    categories: CrawlEntity[],
-    waivers: CrawlEntity[],
-    schedules: CrawlEntity[],
-    fields: CrawlEntity[],
-    flags: CrawlEntity[]
+    categories: CrawlEntity<Category>[],
+    waivers: CrawlEntity<Waiver>[],
+    schedules: CrawlEntity<Schedule>[],
+    fields: CrawlEntity<RegistrationField>[],
+    flags: CrawlEntity<RedFlag>[]
   },
   children?: ReactNode
 }

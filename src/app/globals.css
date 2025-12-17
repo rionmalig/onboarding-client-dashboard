@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 0 0% 97%;
+  --foreground: 210 29% 24%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 210 29% 24%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 29% 24%;
+
+  --primary: 200 45% 22%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 20% 96%;
+  --secondary-foreground: 200 45% 22%;
+
+  --muted: 210 20% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 25 95% 53%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
+
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 100%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 200 45% 22%;
+  --radius: 0.5rem;
+
+  --sidebar-background: 200 45% 22%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 25 95% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 200 40% 28%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 200 40% 28%;
+  --sidebar-ring: 25 95% 53%;
+
+  --header-bg: 200 45% 22%;
+  --header-foreground: 0 0% 100%;
+  --ai-badge: 199 89% 48%;
+  --ai-badge-foreground: 0 0% 100%;
+  --edited-badge: 271 81% 56%;
+  --edited-badge-foreground: 0 0% 100%;
+  --accepted-badge: 142 71% 45%;
+  --accepted-badge-foreground: 0 0% 100%;
 }
 
+/* --------------------------------------------------
+   DARK MODE TOKENS
+-------------------------------------------------- */
+.dark {
+  --background: 222 84% 5%;
+  --foreground: 210 40% 98%;
+
+  --card: 222 84% 5%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 84% 5%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222 47% 11%;
+
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 25 95% 53%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 212 27% 84%;
+
+  --sidebar-background: 240 6% 10%;
+  --sidebar-foreground: 240 5% 96%;
+  --sidebar-primary: 224 76% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 4% 16%;
+  --sidebar-accent-foreground: 240 5% 96%;
+  --sidebar-border: 240 4% 16%;
+  --sidebar-ring: 217 91% 60%;
+}
+
+/* --------------------------------------------------
+   TAILWIND v4 DESIGN TOKENS (must use hsl())
+-------------------------------------------------- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --radius: var(--radius);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-sidebar-background: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-header-bg: hsl(var(--header-bg));
+  --color-header-foreground: hsl(var(--header-foreground));
+
+  --color-ai-badge: hsl(var(--ai-badge));
+  --color-ai-badge-foreground: hsl(var(--ai-badge-foreground));
+  --color-edited-badge: hsl(var(--edited-badge));
+  --color-edited-badge-foreground: hsl(var(--edited-badge-foreground));
+  --color-accepted-badge: hsl(var(--accepted-badge));
+  --color-accepted-badge-foreground: hsl(var(--accepted-badge-foreground));
+
+  --font-sans: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
+* {
+  border-color: hsl(var(--border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Inter", sans-serif;
+}
+
+/* --------------------------------------------------
+   COMPONENT UTILITIES
+-------------------------------------------------- */
+.playbook-header {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.status-badge-suggested {
+  background-color: hsl(var(--ai-badge));
+  color: hsl(var(--ai-badge-foreground));
+}
+
+.status-badge-edited {
+  background-color: hsl(var(--edited-badge));
+  color: hsl(var(--edited-badge-foreground));
+}
+
+.status-badge-accepted {
+  background-color: hsl(var(--accepted-badge));
+  color: hsl(var(--accepted-badge-foreground));
 }

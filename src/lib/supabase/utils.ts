@@ -1,6 +1,6 @@
 import { CrawlEntity, CrawlEntityValueUnion } from "../types/business/website-crawl";
 
-export const getCurrentValue = <T extends CrawlEntityValueUnion>(crawlEntity: CrawlEntity) => {
+export const getCurrentValue = <T extends CrawlEntityValueUnion>(crawlEntity: CrawlEntity<T>) => {
   const aiValue = crawlEntity.ai_value as T;
   const finalValue = crawlEntity.final_value as T;
 
